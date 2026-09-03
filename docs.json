@@ -55,12 +55,13 @@
                 ]
               },
               {
-                "group": "Transacciones",
+                "group": "Tesorería",
                 "icon": "repeat",
                 "pages": [
                   "es/guides/transactions-overview",
                   "es/guides/domestic-transfers",
-                  "es/guides/international-transfers"
+                  "es/guides/international-transfers",
+                  "es/guides/services"
                 ]
               },
               {
@@ -75,7 +76,8 @@
                 "icon": "receipt",
                 "pages": [
                   "es/guides/invoices",
-                  "es/guides/invoices-sat"
+                  "es/guides/invoices-sat",
+                  "es/guides/invoices-new"
                 ]
               },
               {
@@ -138,12 +140,13 @@
                 ]
               },
               {
-                "group": "Transactions",
+                "group": "Treasure",
                 "icon": "repeat",
                 "pages": [
                   "en/guides/transactions-overview",
                   "en/guides/domestic-transfers",
-                  "en/guides/international-transfers"
+                  "en/guides/international-transfers",
+                  "en/guides/services.mdx"
                 ]
               },
               {
@@ -158,7 +161,8 @@
                 "icon": "receipt",
                 "pages": [
                   "en/guides/invoices",
-                  "en/guides/invoices-sat"
+                  "en/guides/invoices-sat",
+                  "en/guides/invoices-new"
                 ]
               },
               {

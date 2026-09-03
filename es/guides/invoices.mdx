@@ -1,91 +1,54 @@
 ---
-title: Facturas
+title: Centro de Control Contable
 ---
 
+El módulo **"Facturas"** permite gestionar, conciliar y controlar de manera centralizada los comprobantes fiscales y los movimientos financieros de su empresa. Desde este **Centro de Control Contable**, el usuario puede monitorear indicadores fiscales clave, sincronizar facturas con el SAT y administrar tanto facturas emitidas como recibidas.
 
-Usted accede al módulo **"Facturas"** desde el sistema. Al ingresar, el sistema muestra la pantalla principal denominada **"Centro de Control Contable"**, donde se presenta un resumen general del estado de las facturas registradas.
-
-En esta sección, el sistema muestra indicadores clave que le permiten visualizar de forma rápida la situación actual de sus documentos, incluyendo:
-
-- Facturas pendientes
-- Facturas conciliadas
-
-De esta manera, usted puede identificar fácilmente la cantidad de facturas que requieren atención y aquellas que ya han sido conciliadas correctamente.
+Para acceder a esta sección, diríjase al menú lateral del sistema y seleccione el icono correspondiente a **"Facturas"**.
 
 ---
 
-El sistema también presenta la sección **"Facturas Registradas"**, donde se muestra el listado completo de documentos disponibles. En este apartado, usted puede aplicar filtros para organizar la información según sus necesidades.
+### Panel de Indicadores Fiscales
 
-Las facturas pueden filtrarse por los siguientes criterios:
+En la parte superior del módulo, el sistema presenta un resumen en tiempo real con los principales métricos del periodo seleccionado (por defecto, el mes en curso):
 
-- Todas
-- Conciliadas
-- Pendientes
-- Sin movimiento
+- **IVA Trasladado**: Suma del IVA cobrado en las facturas emitidas.
+- **IVA Acreditable**: Suma del IVA pagado en facturas de proveedores.
+- **IVA a Favor**: Saldo a favor resultante del cálculo del periodo.
+- **ISR Estimado**: Cálculo aproximado del Impuesto Sobre la Renta correspondiente al periodo.
 
-Además, el sistema permite realizar búsquedas específicas ingresando alguno de los siguientes datos:
-
-- Número de factura
-- Emisor
-- RFC
-
-Una vez aplicados los filtros o criterios de búsqueda, el sistema muestra los resultados que coinciden con la información solicitada.
-
-El sistema presenta diferentes botones de acción que le permiten gestionar las facturas de manera eficiente. Estas acciones incluyen:
-
-- Subir factura
-- Subir estado de cuenta
-- Obtener facturas del SAT
-
-Usted puede seleccionar la opción que desee utilizar según la operación que necesite realizar.
-
-![title](/images/cedi-facturas.png)
----
-
-### Subir factura
-
-Para registrar una nueva factura en el sistema, usted debe seleccionar la opción **"Subir factura"**. El sistema permite cargar un archivo de factura en formato **PDF**.
-
-Una vez que el archivo ha sido cargado, el sistema valida automáticamente su contenido para verificar que cumpla con los requisitos establecidos. Si la validación es exitosa, el sistema registra la factura y la agrega al listado de facturas registradas, permitiendo su consulta y gestión posterior.
+Adicionalmente, se incluye una gráfica de **"IVA neto acumulado"** que permite visualizar la tendencia del impuesto a lo largo de los días del mes, así como secciones de resumen para **"Clientes y emisores"** y **"Conciliación facturas vs. movimientos"**.
 
 ---
 
-### Subir estado de cuenta
+### Acciones y Gestión de Facturas
 
-Si desea registrar un estado de cuenta, usted debe seleccionar la opción **"Subir estado de cuenta"**. El sistema permite cargar un archivo en formato **PDF**, el cual será procesado para validar la información contenida.
+En la esquina superior derecha, el sistema dispone de botones de acción rápida para la carga y emisión de documentos:
 
-Una vez validado el archivo, el sistema registra el estado de cuenta dentro del sistema, permitiendo su integración con el resto de la información financiera.
+- **Subir Factura**: Permite cargar manualmente archivos XML o PDF de comprobantes fiscales al sistema.
+- **Crear factura**: Abre la interfaz para generar y emitir una nueva factura directamente.
+- **Subir estado de cuenta**: Facilita la carga de estados bancarios para procesos de conciliación.
+- **Obtener facturas del SAT**: Ejecuta la sincronización automática con los servidores del SAT para importar comprobantes recibidos o emitidos.
 
+![title](/imagesu/cedi-centrocontable.png)
 ---
 
-### Obtener facturas del SAT
+### Listado de Facturas Registradas
 
-Para obtener facturas directamente desde el **Servicio de Administración Tributaria (SAT)**, usted debe seleccionar la opción **"Obtener facturas del SAT"**. El sistema muestra un formulario donde se solicitan los datos necesarios para realizar la conexión segura con la plataforma del SAT.
+En la sección inferior, la pestaña **"Facturas"** clasifica y muestra la información detallada del catálogo mediante las siguientes vistas:
 
-Los datos requeridos incluyen:
+- **Todas**: Muestra la totalidad de facturas registradas en el periodo.
+- **Por cobrar**: Comprobantes emitidos pendientes de pago por clientes.
+- **Por pagar**: Comprobantes de gastos pendientes de liquidación a proveedores.
+- **Pagadas**: Histórico de facturas conciliadas y liquidadas.
 
-- RFC
-- Llave privada (.key)
-- Certificado (.cer)
-- Contraseña del certificado
+Usted puede utilizar el buscador (**"Buscar por número, emisor, RFC..."**) para filtrar comprobantes específicos. La tabla organizada detalla la siguiente información por cada registro:
 
-El sistema informa que los archivos y credenciales proporcionados se utilizan únicamente para obtener las facturas correspondientes y que se eliminan automáticamente al finalizar el proceso, garantizando la seguridad de la información.
+- **No. Factura**: Folio o identificador único del documento.
+- **Fecha**: Fecha de emisión o registro.
+- **Emisor**: Nombre o Razón Social del emisor.
+- **Total**: Monto final del comprobante.
+- **Estado**: Estatus actual del documento (ej. Pagada, Pendiente, Cancelada).
+- **Acciones**: Opciones disponibles para ver detalle, descargar archivos o conciliar.
 
-Usted puede seleccionar las siguientes opciones adicionales según sus necesidades:
-
-- Guardar y registrar las facturas en el sistema
-- Enviar facturas por correo electrónico en formato CSV
-
-Si usted activa la opción de envío por correo electrónico, el sistema solicitará la siguiente información:
-
-- Nombre del destinatario
-- Correo electrónico
-
-Una vez completados los datos, usted debe seleccionar la opción **"Obtener facturas"** correspondiente al periodo deseado.
-
-El sistema se conecta al SAT, descarga las facturas correspondientes al periodo indicado y las registra automáticamente dentro del sistema.
-
-Finalmente, el sistema muestra un mensaje de confirmación indicando que las facturas fueron obtenidas correctamente y actualiza el listado de facturas registradas, permitiéndole visualizar las nuevas facturas dentro de la plataforma.
-
-![title](/images/cedi-facturas-sat.png)
-
+---

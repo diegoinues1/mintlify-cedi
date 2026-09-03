@@ -1,0 +1,63 @@
+---
+title: Creación y Timbrado de Facturas
+---
+
+Para la emisión de comprobantes fiscales dentro del módulo **"Facturas"**, usted debe seleccionar la opción **"Crear factura"** ubicada en la esquina superior derecha del Centro de Control Contable. 
+
+El sistema iniciará el flujo de creación o solicitará la configuración previa del timbrado fiscal en caso de no haber sido activado con anterioridad.
+
+![title](/imagesu/cedi-timbrado-sat1.png)
+---
+
+### Activación del Timbrado SAT
+
+Si es la primera vez que genera un comprobante o su cuenta no ha completado el registro fiscal, el sistema mostrará la notificación **"Timbrado SAT pendiente"**. Al seleccionar la opción **"Activar timbrado"**, se desplegará una ventana donde deberá completar cuatro etapas:
+
+1. **Organización**: Crear y vincular la organización de timbrado con la persona moral registrada mediante el botón **"Crear organización"**.
+2. **Datos Fiscales**: Ingresar o editar la información fiscal del emisor:
+   - Nombre comercial y Razón social SAT.
+   - Régimen fiscal y correo de soporte.
+   - Dirección completa (Calle, No. ext., No. int., Colonia, Municipio, Estado y Código Postal fiscal).
+3. **Sellos CSD**: Subir los archivos del Certificado de Sello Digital:
+   - Archivo `.cer`
+   - Archivo `.key`
+   - Contraseña de llave privada
+4. **Carta Manifiesto**: Firmar digitalmente la carta manifiesto para autorizar la emisión de comprobantes ante el SAT.
+
+![title](/imagesu/cedi-timbrado-sat2.png)
+![title](/imagesu/cedi-timbrado-sat3.png)
+
+
+---
+
+### Formulario de Nueva Factura
+
+Una vez activo el timbrado, el sistema habilitará el formulario **"Nueva Factura"**. En esta sección se deben capturar los datos generales de la operación:
+
+- **Datos de emisión**: Fecha de emisión y folio asignado (ej. `CED-001`).
+- **Timbrar factura global**: Opción seleccionable para operaciones de venta al público en general (RFC genérico `XAXX010101000`, régimen 616).
+- **Atributos fiscales (CFDI)**:
+  - **Método de pago**: Selección del esquema aplicable (ej. `PUE — Una sola exhibición`).
+  - **Forma de pago**: Selección de la clave correspondiente (ej. `99 — Por definir`).
+  - **Uso CFDI**: Destino fiscal del comprobante (ej. `G03 — Gastos en general`).
+- **Datos del Receptor**: Selección del cliente registrado al cual se emitirá la factura.
+
+![title](/imagesu/cedi-facturasnuevas1.png)
+---
+
+### Conceptos, Impuestos y Confirmación
+
+En la sección inferior del formulario, usted debe detallar las partidas e impuestos asociados a la factura:
+
+1. **Detalle de conceptos**:
+   - **Descripción**: Redacción del concepto o producto.
+   - **Cantidad, Precio y Total**: Datos numéricos del ítem.
+   - **Clave SAT**: Identificador de 8 dígitos correspondiente al catálogo fiscal (ej. `84111506`).
+   - **Unidad de medida**: Selección de la clave aplicable (ej. `E48 — Unidad de servicio`).
+2. **Impuestos**: Configuración de tasas e impuestos aplicables (ej. IVA 16%) o incorporación de impuestos adicionales mediante **"Agregar impuesto"**.
+3. **Condiciones de Pago y Notas**: Campo opcional para ingresar condiciones comerciales o mensajes informativos para el cliente.
+
+Una vez revisada la información, seleccione la opción **"Crear"** para emitir y timbrar formalmente el comprobante fiscal.
+
+![title](/imagesu/cedi-facturasnuevas2.png)
+---
