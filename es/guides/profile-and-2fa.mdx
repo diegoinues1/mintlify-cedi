@@ -1,40 +1,63 @@
 ---
-title: Perfil de usuarios y código 2FA
+title: Perfil de Usuario y Seguridad
 ---
 
-## Perfil de usuario
-
-El usuario accede a la pantalla **"Perfil de usuario"** desde el menú lateral, donde el sistema muestra la información general asociada a su cuenta.
-
-En la sección **"Perfil"**, el sistema presenta los datos principales del usuario, como su correo electrónico, nombre completo y el equipo asignado. Desde este apartado, el usuario puede visualizar su información personal y administrarla seleccionando la opción **"Cambiar / Administrar"**, lo que le permite gestionar y actualizar los equipos asignados según sea necesario.
+El usuario accede a la pantalla **"Perfil"** desde el menú lateral del sistema, donde se despliega la información general de la cuenta, los métodos de seguridad activos, los detalles del plan contratado y los datos fiscales de la empresa.
 
 ---
 
-En el apartado de **Configuración de Seguridad**, el sistema muestra la opción de **Autenticación de Dos Factores (2FA)**. Al seleccionar **"Configurar 2FA"**, el usuario es redirigido al flujo de configuración de autenticación en dos pasos, el cual se describe en las siguientes secciones.
+### Información del Perfil
+
+En la sección **Perfil**, el sistema muestra los datos identificadores del usuario:
+
+- **Email**: Correo electrónico asociado a la cuenta.
+- **Nombre Completo**: Nombre del usuario titular.
+- **Equipo**: Nombre del equipo o grupo asignado dentro de la organización. Desde esta opción, el usuario puede seleccionar **"Cambiar / Administrar"** para gestionar la asignación de su equipo.
 
 ---
 
-El sistema también presenta la sección **Información de la Empresa**, donde se despliegan los datos previamente registrados, incluyendo el nombre de la empresa, RFC, dirección completa, teléfono de contacto, categoría y objeto social. El usuario puede consultar esta información en cualquier momento y desplazarse hacia abajo para visualizar la totalidad de los datos disponibles.
+### Configuración de Seguridad y Verificación
 
-![title](/images/cedi-informacion-usuarios.png)
+En el apartado **Configuración de Seguridad**, el sistema permite administrar los mecanismos de autenticación reforzada para proteger el acceso a la cuenta:
 
-El usuario puede regresar a cualquier módulo del sistema seleccionando una opción del menú lateral izquierdo.
+- **Aplicación autenticadora**: Gestión de códigos TOTP mediante aplicaciones como Google Authenticator o Microsoft Authenticator. El usuario puede activar/desactivar este método seleccionando **"Desactivar"** (si ya se encuentra activo) o **"Configurar"**.
+- **Verificación por correo**: Opción para confirmar operaciones sensibles mediante la recepción de un código enviado al correo electrónico de inicio de sesión. Para activarlo, el usuario debe seleccionar la opción **"Configurar"**.
 
 ---
 
-## Configuración y activación del código 2FA
+### Plan de Suscripción
 
-Para activar la autenticación en dos factores, el sistema muestra una ventana informativa indicando que es necesario instalar una aplicación autenticadora, como **Google Authenticator** o **Microsoft Authenticator**. Para efectos de este flujo, se utilizará **Google Authenticator** como referencia.
+En el apartado **Plan**, el sistema presenta la información sobre el nivel de servicio actual:
 
-En la computadora, el sistema presenta los elementos necesarios para completar la configuración:
+- **Tipo de Plan**: Muestra la modalidad contratada (ej. *Empresarial*).
+- **Periodo actual**: Vigencia del ciclo de facturación activo.
+- **Uso del agente IA contable**: Permite consultar el consumo y métricas mediante la opción **"Ver detalles"**.
+- **Cancelar suscripción**: Botón de acción para gestionar la baja o modificación del plan actual.
 
-- Código QR
-- Clave de configuración
-- Campo para ingresar un código temporal
+![title](/imagesu/cedi-perfilusuario1.png)
 
-El código temporal se obtendrá al finalizar los pasos siguientes.
+---
 
-El usuario debe ingresar a la **App Store** o **Play Store**, dependiendo del sistema operativo de su dispositivo móvil (iOS o Android), buscar la aplicación **Google Authenticator**, instalarla y abrirla.
+### Información de la Empresa
+
+Al desplazarse hacia abajo en la pantalla, se despliega el panel **Información de la Empresa**, donde se detallan los datos registrados de la persona moral:
+
+- **Identificación**: Nombre de la empresa y RFC.
+- **Dirección**: Calle, No. Exterior, No. Interior, Colonia, Municipio/Alcaldía, Entidad Federativa y Código Postal.
+- **Contacto**: Teléfono principal de la empresa.
+- **Información Adicional**: Categoría de la empresa y Objeto Social registrado.
+
+![title](/imagesu/cedi-perfilusuario2.png)
+
+---
+
+## Configuración y activación del código 2FA (Aplicación Autenticadora)
+
+Para activar la **Aplicación autenticadora** desde el módulo de seguridad, el usuario debe seleccionar la opción **"Configurar"**. El sistema iniciará el flujo de vinculación solicitando el uso de una aplicación compatible (como Google Authenticator).
+
+1. **Instalación de la App**: En su dispositivo móvil (iOS o Android), acceda a la App Store o Google Play Store, busque e instale la aplicación **Google Authenticator**.
+2. **Escaneo del Código QR**: Abra la aplicación móvil, seleccione la opción para añadir una cuenta y elija **"Escanear un código QR"**.
+3. **Escaneo de pantalla**: Apunte la cámara del teléfono hacia el código QR que se despliega en la computadora dentro del sistema.
 
 <div className="not-prose grid grid-cols-1 gap-4 sm:grid-cols-2">
   <img
@@ -49,15 +72,8 @@ El usuario debe ingresar a la **App Store** o **Play Store**, dependiendo del si
   />
 </div>
 
-Posteriormente, el usuario accede a la pantalla de inicio de sesión de Google, donde introduce su correo electrónico y selecciona **"Siguiente"**. El sistema valida la información y muestra el campo correspondiente para ingresar la contraseña.
-
----
-
-Una vez que el usuario introduce su contraseña y selecciona **"Siguiente"**, el sistema verifica las credenciales y, en caso de tener activa la verificación en dos pasos, solicita una autenticación adicional.
-
-A continuación, se muestra la pantalla **"Mayor protección con Google Authenticator"**, donde el usuario selecciona **"Empezar"** para iniciar el proceso de configuración.
-
-El sistema despliega la pantalla principal de la aplicación, indicando que aún no hay ningún código configurado. El usuario selecciona **"Añadir código"**, momento en el cual se presentan dos opciones para agregar una nueva cuenta: introducir una clave manualmente o escanear un código QR.
+4. **Generación de código temporal**: La aplicación comenzará a generar códigos dinámicos de 6 dígitos que se renuevan periódicamente (aproximadamente cada 30 segundos).
+5. **Confirmación en el sistema**: Ingrese el código dinámico vigente mostrado en su celular dentro del campo de texto de la plataforma y confirme la operación.
 
 <div className="not-prose grid grid-cols-1 gap-4 sm:grid-cols-2">
   <img
@@ -72,18 +88,7 @@ El sistema despliega la pantalla principal de la aplicación, indicando que aún
   />
 </div>
 
-En este flujo, el usuario selecciona la opción **"Escanear un código QR"**, lo que activa la cámara del dispositivo móvil. El usuario escanea el código QR mostrado en la computadora.
-
-El sistema registra la cuenta y comienza a generar códigos temporales de verificación. Estos códigos cambian automáticamente con el tiempo, por lo que es importante ingresar uno vigente antes de que expire. Generalmente, los códigos tienen una duración aproximada de 30 segundos.
-
-El usuario introduce el código temporal en el campo correspondiente dentro del sistema.
-
----
-
-El sistema valida si el código ingresado es correcto y vigente:
-
-- Si el código es válido, el sistema registra exitosamente la creación del código 2FA y permite el acceso a las herramientas del sistema CEDI.
-- Si el código no es válido, el sistema rechaza la verificación y permite al usuario ingresar un nuevo código.
+Una vez validado el código, el sistema registrará exitosamente la activación de la Autenticación de Dos Factores (2FA) y mostrará el estado actualizado a **"Desactivar"** dentro del panel de perfil.
 
 <div className="not-prose flex justify-center">
   <img
@@ -92,10 +97,5 @@ El sistema valida si el código ingresado es correcto y vigente:
     className="w-full max-w-md rounded-lg border border-zinc-200 dark:border-zinc-700"
   />
 </div>
-
----
-
-A partir de este momento, el usuario puede acceder a los diferentes módulos del sistema y utilizar sus funcionalidades de manera segura.
-
 
 ---

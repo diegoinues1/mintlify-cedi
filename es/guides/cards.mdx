@@ -1,0 +1,92 @@
+---
+title: Gestión de Tarjetas y Plantillas de Comercios
+---
+
+El módulo **"Tarjetas"** permite crear, administrar y controlar las tarjetas corporativas de la cuenta, así como definir reglas específicas de consumo en comercios mediante plantillas personalizadas.
+
+---
+
+### Panel de Gestión de Tarjetas
+
+Desde el panel principal de **Gestión de Tarjetas**, el usuario puede visualizar y administrar las tarjetas emitidas. En la barra superior de acciones se encuentran disponibles las siguientes opciones:
+
+- **Añadir tarjeta Cedi**: Inicia el flujo para la emisión o asignación de una nueva tarjeta.
+- **Plantillas de comercios**: Acceso al catálogo de plantillas para la restricción o autorización de categorías comerciales.
+- **Reporte global**: Permite exportar los movimientos mensuales de todas las tarjetas de la empresa.
+
+![title](/imagesu/cedi-tarjetas1.png)
+
+---
+
+### Descarga de Reporte Global
+
+Al seleccionar la opción **"Reporte global"**, el sistema desplegará una ventana modal para la generación del informe de movimientos:
+
+1. **Selección del Mes**: Seleccione en el menú desplegable el periodo mensual ya cerrado que se desea consultar (ej. *Agosto de 2026*).
+2. **Descarga**: Haga clic en **"Descargar CSV"** para obtener el archivo con el historial consolidado de transacciones.
+
+![title](/imagesu/cedi-tarjetas7.png)
+
+---
+
+### Creación y Asignación de Tarjetas
+
+Para emitir una tarjeta, haga clic en el botón **"Añadir tarjeta Cedi"**. Se desplegará el formulario **"Crear / asignar tarjetas"**, en el cual deberá configurar los siguientes campos:
+
+- **Miembro**: Seleccione al usuario titular al que se le asignará la tarjeta.
+- **Tipo**: Elija el formato de la tarjeta (**Virtual** o **Física**).
+  - *Nota*: Si selecciona **Física**, se habilitará el campo obligatorio **PAN (16 dígitos)** para capturar el número del plástico.
+- **Alias**: Ingrese un identificador interno (ej. *Gastos oficina*, *Viajes*).
+- **Límite**: Defina el monto máximo asignado a la tarjeta.
+- **Configurar bloqueo por comercio**:
+  - **Usar plantilla**: Asigna una regla de comercios previamente configurada.
+  - **Personalizar**: Permite establecer reglas de comercios exclusivas para esta tarjeta.
+
+![title](/imagesu/cedi-tarjetas5.png)
+
+#### Verificación de Seguridad
+
+Al confirmar la creación de la tarjeta seleccionando **"Crear tarjeta"**, el sistema solicitará una **Verificación de seguridad**. Ingrese el código de 6 dígitos (generado por su aplicación autenticadora o enviado por correo) y haga clic en **"Verificar"** para autorizar la asignación.
+
+![title](/imagesu/cedi-tarjetas6.png)
+
+---
+
+### Crear Nueva Plantilla de Comercios
+
+Para definir un nuevo conjunto de reglas de comercio, seleccione **"Nueva plantilla"**. En la pantalla de configuración deberá completar los siguientes apartados:
+
+1. **Datos Generales**:
+   - **Nombre de la plantilla**: Título identificador (ej. *Combustible autorizado*).
+   - **Descripción**: Contexto interno opcional para el equipo.
+2. **Política de la plantilla**:
+   - **Permitir**: La tarjeta solo aceptará compras en los comercios seleccionados.
+   - **Bloquear**: Se rechazarán compras en los comercios seleccionados y se permitirá el resto.
+3. **Comercios**:
+   - Utilice el buscador para localizar giros o códigos específicos.
+   - Active o desactive los interruptores correspondientes a las categorías comerciales (ej. *Alimentación y Restaurantes*, *Automotriz y Combustible*, *Construcción y Hogar*, *Educación*).
+4. **Asignar a tarjetas**:
+   - Busque por alias o últimos dígitos para vincular la plantilla directamente a tarjetas activas.
+
+Para finalizar, haga clic en **"Crear plantilla"**.
+
+![title](/imagesu/cedi-tarjetas3.png)
+
+---
+
+### Plantillas de Comercios
+
+Accediendo desde el botón **"Plantillas de comercios"**, el usuario puede consultar y administrar el listado de reglas comerciales predefinidas que aplican sobre las tarjetas.
+
+![title](/imagesu/cedi-tarjetas4.png)
+
+Si existen plantillas configuradas, la tabla mostrará la información detallada de cada una:
+
+- **Plantilla**: Nombre asignado a la plantilla.
+- **Descripción**: Uso o contexto interno de la regla.
+- **Comercios**: Política aplicada (**PERMITIR** o **BLOQUEAR**) junto con las categorías incluidas (ej. *Servicios Financieros*, *Salud y Bienestar*, *Viajes y Hospedaje*).
+- **Alcance**: Indica si es una regla **Compartida** (reutilizable) o personalizada.
+- **Acciones**: Opciones para editar o eliminar la plantilla.
+
+---
+

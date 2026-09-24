@@ -17,14 +17,6 @@
       {
         "language": "es",
         "default": true,
-        "navbar": {
-          "links": [
-            {
-              "label": "English",
-              "href": "/en/intro"
-            }
-          ]
-        },
         "tabs": [
           {
             "tab": "Guía",
@@ -72,7 +64,14 @@
                 ]
               },
               {
-                "group": "Facturas",
+                "group": "Tarjetas",
+                "icon": "credit-card",
+                "pages": [
+                  "es/guides/cards"
+                ]
+              },
+              {
+                "group": "Contabilidad",
                 "icon": "receipt",
                 "pages": [
                   "es/guides/invoices",
@@ -94,22 +93,12 @@
                   "es/guides/financial-assistant"
                 ]
               }
-              
             ]
           }
-          
         ]
       },
       {
         "language": "en",
-        "navbar": {
-          "links": [
-            {
-              "label": "Español",
-              "href": "/es/intro"
-            }
-          ]
-        },
         "tabs": [
           {
             "tab": "Guides",
@@ -146,7 +135,7 @@
                   "en/guides/transactions-overview",
                   "en/guides/domestic-transfers",
                   "en/guides/international-transfers",
-                  "en/guides/services.mdx"
+                  "en/guides/services"
                 ]
               },
               {
@@ -179,8 +168,6 @@
                   "en/guides/financial-assistant"
                 ]
               }
-             
-              
             ]
           }
         ]
